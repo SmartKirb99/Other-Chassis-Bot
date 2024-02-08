@@ -7,3 +7,10 @@ Now the issue seems to occur every time I try to enable the program. Way too man
 This seems to happen a lot.
 ﻿﻿﻿﻿﻿﻿﻿﻿ERROR ﻿﻿ 103 ﻿﻿ CTR: Firm Vers could not be retrieved. Use Phoenix Tuner X to check that the device is running Phoenix 5 firmware (22.X), the device ID is correct, the specified CAN bus is correct, and the device is powered. ﻿﻿ Victor SPX 3  ﻿﻿﻿
 There only seems to be 3 motor controllers active, according to Tuner X.
+Seemingly there is a new error replacing the Internal issues with print and error tags.
+﻿﻿﻿﻿﻿﻿﻿﻿Warning ﻿﻿ 44004 ﻿﻿ FRC: The Driver Station has lost communication with the robot. ﻿﻿ Driver Station 
+Warning ﻿﻿ 44000 ﻿﻿ Driver Station not keeping up with protocol rates ﻿﻿ Driver Station ﻿﻿﻿
+﻿﻿﻿﻿﻿﻿﻿﻿Warning ﻿﻿ 44002 ﻿﻿ Ping Results:  ﻿link-bad﻿,  DS radio(.4)-bad﻿,  robot radio(.1)-bad﻿,  roboRIO(.2)-bad﻿,  FMS-bad﻿﻿ Driver Station ﻿﻿﻿
+More errors all causing the robot to reset, perhaps it has something to do with electrical. As the router on the robot seems to reset when I go too fast.
+Going too fast and stopping abruptly seems to cause the router to reset, and perhaps the same thing is happening with the rio.
+And as it turns out that wasn't the case, I drove it a little and the router reset.
