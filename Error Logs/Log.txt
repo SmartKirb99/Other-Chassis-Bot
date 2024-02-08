@@ -1,0 +1,9 @@
+ERROR  1  DifferentialDrive... Output not updated often enough. See https://docs.wpilib.org/motorsafety for more information.  edu.wpi.first.wpilibj.MotorSafety.check(MotorSafety.java:140) 
+Strangely, The robot doesn't seem to move at all in auton anymore, it can turn, but it cannot move forward in auton anymore...
+Also throwing "Internal issues with print and error tags"... A lot of them, perhaps that happens when the computer disconnects from the robot?
+Now the issue seems to occur every time I try to enable the program. Way too many "Internal issues with print and error tags"...
+3 GetSelectedSensorPosition ﻿﻿﻿
+﻿﻿﻿﻿﻿﻿﻿﻿ERROR ﻿﻿ -3 ﻿﻿ CTR: CAN frame not received/too-stale. ﻿﻿ Victor SPX 3 GetSelectedSensorPosition ﻿﻿﻿
+This seems to happen a lot.
+﻿﻿﻿﻿﻿﻿﻿﻿ERROR ﻿﻿ 103 ﻿﻿ CTR: Firm Vers could not be retrieved. Use Phoenix Tuner X to check that the device is running Phoenix 5 firmware (22.X), the device ID is correct, the specified CAN bus is correct, and the device is powered. ﻿﻿ Victor SPX 3  ﻿﻿﻿
+There only seems to be 3 motor controllers active, according to Tuner X.
