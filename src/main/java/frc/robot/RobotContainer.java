@@ -4,6 +4,7 @@ import frc.robot.commands.DriveForwardTimed;
 import frc.robot.commands.ForwardAndTurn;
 import frc.robot.commands.ShortDrive;
 import frc.robot.commands.TurningTime;
+import frc.robot.commands.blank;
 import frc.robot.Constants.DriveConstants;
 import frc.robot.Constants.OIConstants;
 import frc.robot.commands.ArcadeDriveCMD;
@@ -41,7 +42,7 @@ public class RobotContainer {
     //new JoystickButton(joystick1, XboxController.Button.kA.value).onTrue(new DriveForwardTimed(driveSubsystem, 2));
     new JoystickButton(joystick2, PS5Controller.Button.kCross.value).onTrue(new DriveForwardTimed(driveSubsystem, 1)); //X Button
     new JoystickButton(joystick2, PS5Controller.Button.kCircle.value).onTrue(new TurningTime(driveSubsystem, 5)); // O Button
-    new JoystickButton(joystick2, PS5Controller.Button.kSquare.value).onTrue(new IDViewer());
+    new JoystickButton(joystick2, PS5Controller.Button.kSquare.value).onTrue(new blank(1));
   } 
 
   public Command getAutonomousCommand() {
