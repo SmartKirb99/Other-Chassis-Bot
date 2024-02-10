@@ -8,6 +8,7 @@ import frc.robot.Constants.DriveConstants;
 import frc.robot.Constants.OIConstants;
 import frc.robot.commands.ArcadeDriveCMD;
 import frc.robot.subsystems.DriveSubsystem;
+import edu.wpi.first.wpilibj.PS5Controller;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -20,6 +21,9 @@ import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 public class RobotContainer {
   private final DriveSubsystem driveSubsystem = new DriveSubsystem();
   private final XboxController joystick1 = new XboxController(OIConstants.kDriverJoystickPort);
+  private final PS5Controller joystick2 = new PS5Controller(OIConstants.kDriverJoystickPort); //Constant Added :)
+  
+  //Attempting to add buttons...
   
   public RobotContainer() {
     configureButtonBindings();
@@ -28,12 +32,15 @@ public class RobotContainer {
     m_Chooser.addOption("Short Driving Command", m_ShortDrivingCommand);
     SmartDashboard.putData(m_Chooser);
 
-    driveSubsystem.setDefaultCommand(new ArcadeDriveCMD(driveSubsystem, () -> joystick1.getLeftY(), () -> joystick1.getLeftX()));
+    driveSubsystem.setDefaultCommand(new ArcadeDriveCMD(driveSubsystem, () -> joystick2.getLeftY(), () -> joystick2.getLeftX()));
   }
 
   
   private void configureButtonBindings() {
-  }
+    new JoystickButton(joystick1, XboxController.Button.kA.value).onTrue(new DriveForwardTimed(driveSubsystem, 2));
+    new JoystickButton(joystick2, PS5Controller.Button.kCross.value).onTrue(new DriveForwardTimed(driveSubsystem, 0.3)); //X Button
+    new JoystickButton(joystick2, PS5Controller.Button.kCircle.value).onTrue(new TurningTime(driveSubsystem, 1)); // O Button
+  } 
 
   public Command getAutonomousCommand() {
     return m_Chooser.getSelected();
