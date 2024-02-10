@@ -20,7 +20,7 @@ import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import edu.wpi.first.apriltag.jni.AprilTagJNI;
-//TODO: Ask the programming mentor about the Limelight Apriltag thingy :|. Or the FRC community.
+//TODO: Ask about getting Apriltag IDs to work.
 
 public class Limelight extends SubsystemBase {
 
