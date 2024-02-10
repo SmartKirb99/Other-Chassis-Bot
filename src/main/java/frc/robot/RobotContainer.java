@@ -17,6 +17,7 @@ import edu.wpi.first.wpilibj2.command.ParallelCommandGroup;
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
 import edu.wpi.first.wpilibj2.command.WaitCommand;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
+import frc.robot.commands.IDViewer;
 
 public class RobotContainer {
   private final DriveSubsystem driveSubsystem = new DriveSubsystem();
@@ -37,9 +38,10 @@ public class RobotContainer {
 
   
   private void configureButtonBindings() {
-    new JoystickButton(joystick1, XboxController.Button.kA.value).onTrue(new DriveForwardTimed(driveSubsystem, 2));
+    //new JoystickButton(joystick1, XboxController.Button.kA.value).onTrue(new DriveForwardTimed(driveSubsystem, 2));
     new JoystickButton(joystick2, PS5Controller.Button.kCross.value).onTrue(new DriveForwardTimed(driveSubsystem, 1)); //X Button
-    new JoystickButton(joystick2, PS5Controller.Button.kCircle.value).onTrue(new TurningTime(driveSubsystem, 1)); // O Button
+    new JoystickButton(joystick2, PS5Controller.Button.kCircle.value).onTrue(new TurningTime(driveSubsystem, 5)); // O Button
+    new JoystickButton(joystick2, PS5Controller.Button.kSquare.value).onTrue(new IDViewer());
   } 
 
   public Command getAutonomousCommand() {

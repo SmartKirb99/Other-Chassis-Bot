@@ -1,41 +1,3 @@
-// package frc.robot.commands;
-
-// import frc.robot.Constants.DriveConstants;
-// import frc.robot.subsystems.DriveSubsystem;
-// import edu.wpi.first.wpilibj.Timer;
-// import edu.wpi.first.wpilibj2.command.Command;
-
-// public class TurningTime extends Command {
-//   /** Creates a new TurningTime. */
-//   public TurningTime() {
-//     // Use addRequirements() here to declare subsystem dependencies.
-//   }
-
-//   // Called when the command is initially scheduled.
-//   @Override
-//   public void initialize() {
-//     System.out.println("Turning Command Started");
-//   }
-
-//   // Called every time the scheduler runs while the command is scheduled.
-//   @Override
-//   public void execute() {
-
-//   }
-
-//   // Called once the command ends or is interrupted.
-//   @Override
-//   public void end(boolean interrupted) {
-//   System.out.println("Turning Command Ended");
-//   }
-//   // Returns true when the command should end.
-//   @Override
-//   public boolean isFinished() {
-//     return false;
-//   }
-// }
-
-
 //Code below written using Copilot:
 
 package frc.robot.commands;
@@ -52,7 +14,7 @@ public class TurningTime extends Command {
 
   // Declare the turn speed and duration constants
   private static final double kTurnSpeed = 0.5; // Adjust this value as needed
-  private static final double kTurnDuration = 2.0; // Adjust this value as needed
+  private static final double kTurnDuration = 2.665; // Adjust this value as needed
 
   //  Creates a new TurningTime.
   public TurningTime(DriveSubsystem drive, int i) {
