@@ -67,5 +67,6 @@ public class Limelight extends SubsystemBase {
     // This method will be called once per scheduler run
     m_botPose = m_table.getEntry("targetpose_robotspace").getDoubleArray(new double[6]); // Updates the robot pose.
     m_tv.setBoolean(tv.getDouble(0) == 1); // Updates shuffleboard on if the limelight has a target.
+    
   }
 }
