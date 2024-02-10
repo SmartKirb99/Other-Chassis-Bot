@@ -38,7 +38,7 @@ public class RobotContainer {
   
   private void configureButtonBindings() {
     new JoystickButton(joystick1, XboxController.Button.kA.value).onTrue(new DriveForwardTimed(driveSubsystem, 2));
-    new JoystickButton(joystick2, PS5Controller.Button.kCross.value).onTrue(new DriveForwardTimed(driveSubsystem, 0.3)); //X Button
+    new JoystickButton(joystick2, PS5Controller.Button.kCross.value).onTrue(new DriveForwardTimed(driveSubsystem, 1)); //X Button
     new JoystickButton(joystick2, PS5Controller.Button.kCircle.value).onTrue(new TurningTime(driveSubsystem, 1)); // O Button
   } 
 
