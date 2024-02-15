@@ -1,4 +1,61 @@
+package frc.robot.subsystems;
+
+
+import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import edu.wpi.first.wpilibj2.command.Command;
+//Grabbed the code here from 
+
+public class Limelight extends SubsystemBase {
+  
+  //public Limelight() {
+
+  //}
+
+  public double getRotationalRate() {
+    if (!this.isGamePieceFound()) {
+      return 0;
+    }
+  }  
+  
+  double answer = 0;
+  double offset = -Math.toradians(m_LL_Gamepiece.getEntry("tx").getDouble(0));
+
+  double deadzone = 0.05;
+  double kP = 1.5;
+  double kS = 0.1;
+
+  if (offset < 0.0) {
+    kS = kS * -1;
+  }
+
+  answer = (offset * kP) + kS;
+
+  if (Math.abs(offset) < deadzone) {
+    answer = 0;
+  }
+  
+  //public boolean exampleCondition() {
+    
+  //  return false;
+  //}
+
+  //@Override
+  //public void periodic() {
+    
+  //}
+
+
+}
+
+
+
 //Currently I do not know if this current code is compatible with Arcade Drive
+
+
+
+
+
+//Old Code
 
 /*package frc.robot.Vision;
 

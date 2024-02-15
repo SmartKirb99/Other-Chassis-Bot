@@ -2,7 +2,7 @@ package frc.robot.commands;
 //TODO: Get working code for this command
 
 import edu.wpi.first.wpilibj2.command.Command;
-import frc.robot.Vision.LimelightHelpers.*;
+import frc.robot.subsystems.LimelightHelpers.*;
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
