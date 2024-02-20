@@ -9,7 +9,6 @@ import frc.robot.Constants.DriveConstants;
 import frc.robot.Constants.OIConstants;
 import frc.robot.commands.ArcadeDriveCMD;
 import frc.robot.subsystems.DriveSubsystem;
-import frc.robot.subsystems.Limelight;
 import edu.wpi.first.wpilibj.PS5Controller;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
@@ -19,12 +18,12 @@ import edu.wpi.first.wpilibj2.command.ParallelCommandGroup;
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
 import edu.wpi.first.wpilibj2.command.WaitCommand;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
-import frc.robot.commands.IDViewer;
 
 public class RobotContainer {
   private final DriveSubsystem driveSubsystem = new DriveSubsystem();
   private final XboxController joystick1 = new XboxController(OIConstants.kDriverJoystickPort);
   private final PS5Controller joystick2 = new PS5Controller(OIConstants.kDriverJoystickPort); //Constant Added :)
+  
   
   //Attempting to add buttons...
   
@@ -35,7 +34,7 @@ public class RobotContainer {
     m_Chooser.addOption("Short Driving Command", m_ShortDrivingCommand);
     SmartDashboard.putData(m_Chooser);
 
-    driveSubsystem.setDefaultCommand(new ArcadeDriveCMD(driveSubsystem, () -> joystick2.getLeftY(), () -> Limelight.getRotationalRate()));
+    driveSubsystem.setDefaultCommand(new ArcadeDriveCMD(driveSubsystem, () -> joystick2.getLeftY(), () -> joystick2.getLeftX()));
 
     //driveSubsystem.setDefaultCommand(new ArcadeDriveCMD(driveSubsystem, () -> joystick2.getLeftY(), () -> joystick2.getLeftX(), () -> Limelight.getRotationalRate()));
   }
