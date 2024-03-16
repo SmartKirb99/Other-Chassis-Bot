@@ -14,3 +14,6 @@ Warning ﻿﻿ 44000 ﻿﻿ Driver Station not keeping up with protocol rates �
 More errors all causing the robot to reset, perhaps it has something to do with electrical. As the router on the robot seems to reset when I go too fast.
 Going too fast and stopping abruptly seems to cause the router to reset, and perhaps the same thing is happening with the rio.
 And as it turns out that wasn't the case, I drove it a little and the router reset.
+
+
+So apparently, Scanner and Random do not work on the Robot at all.
