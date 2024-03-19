@@ -47,7 +47,7 @@ public class TestDualCommand extends Command {
   @Override
   public void execute() {
     Ocarina = SmartDashboard.getNumber("Input Value", 12);
-    Timing = SmartDashboard.getNumber("CMD Time", 1);
+    Timing = SmartDashboard.getNumber("CMD Run Time", 1);
     System.out.println(Ocarina);
     if(Ocarina == 1987.0) {
       new DriveForwardTimed(m_drive, Timing);
@@ -55,6 +55,8 @@ public class TestDualCommand extends Command {
        System.out.println("Is this working?");
     } else if (Ocarina == 1984.0){
       new TurningTime(m_drive, 1);
+
+      System.out.println("This is the response for 1984");
     } else {
       System.out.println("Else Statement");
     } 
